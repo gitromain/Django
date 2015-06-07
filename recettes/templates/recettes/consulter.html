@@ -11,7 +11,7 @@
 
         <div class="one-column">
             <img src="{{ recette.photo }}"/>
-            Moyenne :   {{ recette.moyenne }} / 5
+            <br/><span>Moyenne :   {{ recette.moyenne }} / 5</span>
 
             {% if user.is_authenticated %}
                 {% if form_note %}

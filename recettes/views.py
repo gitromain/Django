@@ -91,10 +91,10 @@ def ajouter(request):
         if MainForm.is_valid():
             recette = MainForm.save()
             recette.user = request.user
-            recette.save()
             IngredientForm = IngredientFormset(request.POST,instance=recette)
             if IngredientForm.is_valid():
                 IngredientForm.save()
+                EtapeForm = EtapeFormset(request.POST,instance=recette)
                 if EtapeForm.is_valid():
                     EtapeForm.save()
                     return render(request, "recettes/ajouter.html", {
