@@ -37,6 +37,6 @@ La recette contient 1 une plusieurs ingrédients, étapes, notes, commentaires.
 
 Fonctions non réalisés : 
 
-modifier/supprimer recette
-rechercher
-JS permettant l'ajout d'un ingrédient/etape (3 par défaut)
+- modifier/supprimer recette
+- rechercher
+- JS permettant l'ajout d'un ingrédient/etape (3 par défaut)
