@@ -1,0 +1,22 @@
+{% extends "recettes/_base.html" %}
+{% block contenu %}
+<div id="content">
+
+    <!-- title -->
+    <div id="page-title">
+        <span class="title">Inscription</span>
+        <span class="subtitle">Vous êtes jeune et phacochère ? Devenez un vrai porc maintenant !</span>
+    </div>
+
+    <div class="one-column">
+    <form id="registration_form" class="form" method="post" action="{% url 'recettes:auth' %}">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ formulaire_user.as_p }}
+        </fieldset>
+        <input type="submit" value="On m'appelle MONSIEUR PORC ! (s'inscrire)"/>
+    </form>
+    </div>
+
+</div>
+{% endblock %}

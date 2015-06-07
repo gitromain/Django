@@ -1,0 +1,37 @@
+{% extends 'recettes/_base.html' %}
+{% block titre %}Création de recettes{% endblock %}
+{% block contenu %}
+    <div id="content">
+
+        <!-- title -->
+        <div id="page-title">
+            <span class="title">Ajouter une recette</span>
+            <span class="subtitle">Vous voulez ajouter une recette ? C'est ici que ça se passe !</span>
+        </div>
+
+        {% if success_message %}
+        <h5 class="create_success"><b style="color: green">Votre recette a bien été créée !</b></h5>
+         {% endif %}
+        <!-- ENDS title -->
+
+
+        <form method="post" action="{% url 'recettes:ajouter' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="one-column">
+                <h4>Recette :</h4>
+                {{ MainForm.as_p }}
+            </div>
+            <div class="one-column">
+                <h4>Ingrédients :</h4>
+                {{ IngredientForm.as_p }}
+            </div>
+            <div class="one-column">
+                <h4>Etapes :</h4>
+                {{ EtapeForm.as_p }}
+            </div>
+
+            <input type="submit" value="OK" />
+        </form>
+
+    </div>
+{% endblock %}
