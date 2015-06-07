@@ -25,6 +25,8 @@ La recette contient 1 une plusieurs ingrédients, étapes, notes, commentaires.
 
 ###Installation des données :
 
+J'obtient l'erreru suivante lors du dumpdata :
+CommandError: Unable to serialize database: 'NoneType' object has no attribute 'write'
 
 
 ###Compte utilisateur :
