@@ -20,6 +20,7 @@ L'objet note à 2 foreign key :
 
 L'objet commentaire à 2 foreign key :
 - la recette
+- l'user
 
 La recette contient 1 une plusieurs ingrédients, étapes, notes, commentaires.
 
